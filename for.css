@@ -1,0 +1,74 @@
+
+            /*toda escrita nele e as cores pra fora do formulario=fundo*/
+
+body
+{font-family: Arial, Helvetica, sans-serif; /*todo o corpo do html vai ter a fonte*/
+background-image: linear-gradient(to right, rgb(20, 147, 220), rgb(17, 54, 71));}
+ 
+                /*alinhamento de todo formulario nele todo*/
+.box
+{color: white;     /*cor da fonte de todo conteudo*/ 
+position: absolute; /*deixa a linha contorno do formulário em volta das informações*/
+top: 50%;  /*top=topo então sera 50%*/
+left: 50%; /*left=esquerda então sera 50%*/
+transform: translate(-50%,-50%); /*para centralizar o formulário, ele reposiciona um elemento horizontal e/ou vertical*/
+background-color: rgb(0, 0, 0,0.5);
+padding: 15px; /*um espaço entre o elemento e a borda*/
+border-radius: 15px; /*ele arredonda as bordas do elemento de fora*/
+width: 20%;} /*largura de dentro do formulario 20%*/
+
+fieldset
+{border: 3px solid dodgerblue;}  /*3px= espessura da borda, solid=continua, dodgerblue= cor do fio*/
+
+legend
+{border: 1px solid dodgerblue; /*1px= espessura da borda, solid=continua, dodgerblue= cor do fio*/
+padding: 10px;    /*um espaço da escrita e da borda*/
+text-align: center;  /*deixar o texto centralizado*/
+background-color: dodgerblue; /*cor do fundo da legenda*/
+border-radius: 8px;}   /*espessura da borda da legenda*/
+
+.inputbox
+{position: relative;} /*posição normal*/
+
+.inputuser
+{background: none; /*tira o fundo da tela de escrever*/
+border: none;      /*a tela não vai mais existir borda*/
+border-bottom: 1px solid white; /*defini a borda de baixo.*/
+outline: none;         /*tira o contorno quando clica na tela*/
+color:white;        /*a escrita na data de nascimento fica branco*/
+font-size: 15px;      /*campo de escrita vai ficar maior*/
+width: 100%;          /*aumenta a largura*/
+letter-spacing: 2px;}   /*specífica o comportamento do espaçamento entre caracteres de texto.*/
+
+.labelinput
+{position: absolute;    /*aumenta a largura*/
+top: 0px;                /*top=topo então sera 50%*/
+left: 0px;                /*left=esquerda então sera 50%*/
+pointer-events: none;     /*quando tem none qualquer lugar que clicar vai funcionar a açao*/
+transition: .5s;}          /*transitions provê uma forma de controlar a velocidade de uma animação */
+
+.inputuser:focus ~ .labelinput,   /*quando coloca inputuser o FOCUS siginifica colocar uma ação no labelinput*/
+.inputuser:valid ~ .labelinput    /* quando coloca inputuser VALID ele executa novamente açao no label, ele permanece n volta a açao*/
+{top: -20px;                      /*ele vai pra cima, para topo por ser -20px*/
+font-size: 12px;                  /*diminui a fonte em 12px quando vai pra cima*/
+color: dodgerblue;}
+
+#data_nascimento
+{border: none;             /*tirou a espessura da borda*/
+padding: 8px;              /*aumenta o espaço da escrita e da tela*/
+border-radius: 10x;       /*ele arredonda as bordas da tela data*/
+outline: none;            /*ao clicar ma data aparece um contorno de fora, para tirar essa borda por NONE*/
+font-size: 15px;}
+
+#submit
+{ background-image: linear-gradient(to right, rgb(0, 92, 197), rgb(90, 20, 220));
+width: 100%;                   /*largura dele 100%*/
+border: none;                  /*sem borda*/
+padding: 15px;                 /*um espaço da escrita e da borda*/
+color: white;              /*cor da fonte branca*/
+font-size: 15px;             /*tamanho da fonte*/
+cursor:pointer;              /*quando passa o mouse muda o cursor*/
+border-radius: 10px;}        /*espessura da borda da data*/
+
+#submit:hover
+{background-image: linear-gradient(to right, rgb(0, 80, 172), rgb(80, 19, 195));}
